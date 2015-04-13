@@ -18,6 +18,12 @@ Template.time.helpers({
 	}
 });
 
+Template.time.events({
+	'click .delete': function () {
+		Meteor.call('deleteScore', this._id);
+	}
+});
+
 Template.body.events({
 	'submit .add-score': function (event) {
 		var newScore = {

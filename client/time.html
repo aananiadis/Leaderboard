@@ -1,7 +1,8 @@
 <template name="time">
-	<li>
-		<button class="delete">&times;</button>
-
-		<span class="text"><strong>{{time}} </strong> - {{name}} {{date}}</span>
-	</li>
+	<tr>
+		<td>{{time}}</td>
+		<td>{{name}}</td>
+		<td>{{date}}</td>
+		<td><button class="delete btn btn-danger">Delete</button></td>
+	</tr>
 </template>

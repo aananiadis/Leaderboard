@@ -3,15 +3,36 @@
 </head>
 
 <body>
-	<form class="add-score">
-		<input type="text" name="name" placeholder="name">
-		<input type="text" name="time" placeholder="time">
-		<input type="submit" value="Add">
-	</form>
-    <h3>Scores</h3>
-	<ul>
-		{{#each entries}}
-			{{> time}}
-		{{/each}}
-	</ul>
+	<div class="container">
+		<h3>Boot Times</h3>
+		<form class="add-score form-inline">
+			<div class="form-group">
+				<label class="sr-only">Name</label>
+				<input type="text" name="name" class="form-control" placeholder="Enter Name">
+			</div>
+			<div class="form-group">
+				<label class="sr-only">Time</label>
+				<input type="number" name="time" class="form-control" placeholder="Time">
+			</div>
+			<button type="submit" class="btn btn-default">Add Time</button>
+		</form>
+
+		<table class="table table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Time</th>
+					<th>Name</th>
+					<th>Date</th>
+					<th></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{{#each entries}}
+					{{> time}}
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+
 </body>

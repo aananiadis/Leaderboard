@@ -2,7 +2,7 @@ Meteor.subscribe('entries');
 
 Template.body.helpers({
 	entries: function () {
-		return Entries.find({}, {sort: {score: 1}});
+		return Entries.find({}, {sort: {time: 1}});
 	}
 });
 

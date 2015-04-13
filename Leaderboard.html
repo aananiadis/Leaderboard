@@ -3,12 +3,15 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+	<form class="add-score">
+		<input type="text" name="name" placeholder="name">
+		<input type="text" name="score" placeholder="score">
+		<input type="submit" value="Add">
+	</form>
+    <h3>Scores</h3>
+	<ul>
+		{{#each entries}}
+			{{> score}}
+		{{/each}}
+	</ul>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>

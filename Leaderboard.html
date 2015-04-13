@@ -5,13 +5,13 @@
 <body>
 	<form class="add-score">
 		<input type="text" name="name" placeholder="name">
-		<input type="text" name="score" placeholder="score">
+		<input type="text" name="time" placeholder="time">
 		<input type="submit" value="Add">
 	</form>
     <h3>Scores</h3>
 	<ul>
 		{{#each entries}}
-			{{> score}}
+			{{> time}}
 		{{/each}}
 	</ul>
 </body>
